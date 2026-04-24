@@ -1,9 +1,17 @@
 -- activete lazy
 vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
 
-require("plugins")
+require("lazy").setup(require("plugins"))
 require("keymap")
 require("colorsettings")
+
+-- activete pyright
+vim.lsp.config('pyright', {})
+vim.lsp.enable('pyright')
+
+-- activate vimtex
+vim.g.vimtex_compiler_method = "latexmk"
+vim.g.vimtex_view_method = "zathura"
 
 -- set row numbers
 vim.opt.number = true
