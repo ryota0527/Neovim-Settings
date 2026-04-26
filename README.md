@@ -1,9 +1,10 @@
 ## Neovim Settings
 
-Basic nvim settings. \\
-Easily introduced by putting this directory under ~/.config/ \\
+Basic nvim settings. 
 
-Use minimum branch for basic setups. Master branch may include several features which are subjective. \\
+Easily introduced by putting this directory under ~/.config/ 
+
+Use minimum branch for basic setups. Master branch may include several features which are subjective. 
 
 # Requirements
 nvim 0.12 is recommended.
@@ -16,16 +17,26 @@ Installation of
 is required for full functionality of this setting files and plugins.
 
 # Structure of files
-Neovim-Settings/ \\
-| \\
-├── init.lua \\
-| \\
-└── lua/ \\
- | \\
- ├── colorsettings.lua \\
- | \\
- ├── keymap.lua  \\
- | \\
+Neovim-Settings/ 
+
+| 
+
+├── init.lua 
+
+| 
+
+└── lua/ 
+
+ | 
+ 
+ ├── colorsettings.lua 
+ 
+ | 
+ 
+ ├── keymap.lua  
+ 
+ | 
+ 
  └── plugins.lua
 
 # Plugins used in these files
@@ -39,6 +50,6 @@ Neovim-Settings/ \\
 - Backspace : reduce indent (normal)
 - Shift + Backspace : add indent (normal)
 
-========================== \\
+========================== 
 
 日本語は気が向いたら書きます
