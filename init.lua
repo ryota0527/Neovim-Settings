@@ -9,27 +9,6 @@ require("colorsettings")
 vim.lsp.config('pyright', {})
 vim.lsp.enable('pyright')
 
--- vimtex setting
-vim.g.vimtex_compiler_method = "latexmk"
-vim.g.vimtex_view_method = "zathura"
-vim.g.vimtex_compiler_latexmk = {
-  build_dir = "",
-  callback = 1,
-  continuous = 1,
-  executable = "latexmk",
-  options = {
-    "-pdf",
-    "-interaction=nonstopmode",
-    "-synctex=1",
-    "-file-line-error",
-  },
-}
-vim.g.vimtex_view_automatic = 1
-vim.g.vimtex_syntax_enabled = 1
-vim.g.vimtex_indent_enabled = 1
-vim.g.vimtex_view_zathura_sync = 1
-vim.g.vimtex_view_zathura_options = "--synctex-forward @line:@col:@tex @pdf"
-
 -- set row numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
