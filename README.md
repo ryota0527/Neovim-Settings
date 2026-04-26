@@ -1,10 +1,10 @@
-## Neovim Settings
+# Neovim Settings
 
 Basic nvim settings.  
 Easily introduced by putting this directory under ~/.config/  
 Use minimum branch for basic setups. Master branch may include several features which are subjective. 
 
-# Requirements
+## Requirements
 nvim 0.12 is recommended.  
   
 Installation of 
@@ -14,7 +14,7 @@ Installation of
 - pyright 
 is required for full functionality of this setting files and plugins.
 
-# Structure of files
+## Structure of files
 Neovim-Settings/   
 ├── init.lua  
 └── lua/  
@@ -22,12 +22,12 @@ Neovim-Settings/
   ├── keymap.lua  
   └── plugins.lua
 
-# Plugins used in these files
+## Plugins used in these files
 - tokyonight (colorscheme)
 - vimtex
 - lspconfig
 
-# Keybindings
+## Keybindings
 - j -> k : Esc (insert, visual, normal)
 - Alt + h / j / k / l : move 10 rows or columns (visual, normal)
 - Backspace : reduce indent (normal)
