@@ -16,18 +16,17 @@ Installation of
 is required for full functionality of this setting files and plugins.
 
 # Structure of files
-Neovim-Settings/
-|
-├── init.lua
-|
-└── lua/
- |
- ├── colorsettings.lua
- |
- ├── keymap.lua 
- |
+Neovim-Settings/ \\
+| \\
+├── init.lua \\
+| \\
+└── lua/ \\
+ | \\
+ ├── colorsettings.lua \\
+ | \\
+ ├── keymap.lua  \\
+ | \\
  └── plugins.lua
-
 
 # Plugins used in these files
 - tokyonight (colorscheme)
@@ -40,6 +39,6 @@ Neovim-Settings/
 - Backspace : reduce indent (normal)
 - Shift + Backspace : add indent (normal)
 
-==========================
+========================== \\
 
 日本語は気が向いたら書きます
