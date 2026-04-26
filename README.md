@@ -11,7 +11,7 @@ Installation of
 - lazy.nvim
 - LaTeX environment
 - Zathura
-- pyright 
+- pyright  
 is required for full functionality of this setting files and plugins.
 
 ## Structure of files
