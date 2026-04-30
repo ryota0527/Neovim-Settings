@@ -1,40 +1,33 @@
-## Neovim Settings
+# Neovim Settings
 
-Basic nvim settings. \\
-Easily introduced by putting this directory under ~/.config/ \\
+Basic nvim settings.  
+Easily introduced by putting this directory under ~/.config/  
+Use minimum branch for basic setups. Master branch may include several features which are subjective. 
 
-Use minimum branch for basic setups. Master branch may include several features which are subjective. \\
-
-# Requirements
-nvim 0.12 is recommended.
-
+## Requirements
+nvim 0.12 is recommended.  
+  
 Installation of 
 - lazy.nvim
 - LaTeX environment
 - Zathura
-- pyright 
+- pyright  
 is required for full functionality of this setting files and plugins.
 
-# Structure of files
-Neovim-Settings/
-|
-├── init.lua
-|
-└── lua/
- |
- ├── colorsettings.lua
- |
- ├── keymap.lua 
- |
- └── plugins.lua
+## Structure of files
+Neovim-Settings/   
+├── init.lua  
+└── lua/  
+  ├── colorsettings.lua  
+  ├── keymap.lua  
+  └── plugins.lua
 
-
-# Plugins used in these files
+## Plugins used in these files
 - tokyonight (colorscheme)
 - vimtex
 - lspconfig
 
-# Keybindings
+## Keybindings
 - j -> k : Esc (insert, visual, normal)
 - Alt + h / j / k / l : move 10 rows or columns (visual, normal)
 - Backspace : reduce indent (normal)
@@ -42,6 +35,6 @@ Neovim-Settings/
 - g -> h : ^ (normal)
 - g -> l : $ (normal)
 
-==========================
+========================== 
 
 日本語は気が向いたら書きます
