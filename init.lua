@@ -1,6 +1,7 @@
 -- activete lazy
 vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
 
+-- plugins installation
 require("lazy").setup(require("plugins"))
 require("keymap")
 require("colorsettings")
