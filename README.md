@@ -34,7 +34,3 @@ Neovim-Settings/
 - Shift + Backspace : add indent (normal)
 - g -> h : ^ (normal)
 - g -> l : $ (normal)
-
-========================== 
-
-日本語は気が向いたら書きます
