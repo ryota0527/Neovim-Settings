@@ -30,7 +30,5 @@ Neovim-Settings/
 ## Keybindings
 - j -> k : Esc (insert, visual, normal)
 - Alt + h / j / k / l : move 10 rows or columns (visual, normal)
-- Backspace : reduce indent (normal)
-- Shift + Backspace : add indent (normal)
 - g -> h : ^ (normal)
 - g -> l : $ (normal)
