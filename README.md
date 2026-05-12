@@ -32,3 +32,5 @@ Neovim-Settings/
 - Alt + h / j / k / l : move 10 rows or columns (visual, normal)
 - g -> h : ^ (normal)
 - g -> l : $ (normal)
+- Tab : add indent (normal, visual)
+- Shift + Tab : remove indent (normal, visual)
