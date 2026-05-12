@@ -9,6 +9,8 @@ vim.keymap.set("v", "<A-h>", "10h", { noremap = true })
 vim.keymap.set("v", "<A-j>", "10j", { noremap = true })
 vim.keymap.set("v", "<A-k>", "10k", { noremap = true })
 vim.keymap.set("v", "<A-l>", "10l", { noremap = true })
+vim.keymap.set("v", "<Tab>", ">gv", { noremap = true })
+vim.keymap.set("v", "<S-Tab>", "<gv", { noremap = true })
 
 -- normal mode
 vim.keymap.set("n", "<A-h>", "10h", { noremap = true })
