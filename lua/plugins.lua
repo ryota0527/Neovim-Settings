@@ -37,7 +37,31 @@ return {
         
     },
 
-    {"neovim/nvim-lspconfig"},
+    {
+        "neovim/nvim-lspconfig"
+    },
+
+    {
+        "benlubas/molten-nvim",
+    },
+
+-- denops installation and enable skkeleton (incompleted)
+
+--    {
+--        "vim-denops/denops.vim"
+--        cond = function()
+--            return vim.fn.executable('deno') == 1
+--        end,
+--        lazy = true,
+--    },
+
+--    {
+--        "vim-skk/skkeleton",
+--        dependencies = {
+--            "vim-denops/denops.vim",
+--        },
+--    },
+
 }
 
 
