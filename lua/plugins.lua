@@ -45,36 +45,6 @@ return {
         "benlubas/molten-nvim",
     },
 
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-        event = { "BufReadPost", "BufNewFile" },
-        opts = {
-            ensure_installed = {
-                "lua",
-                "vim",
-                "vimdoc",
-                "python",
-                "markdown",
-                "markdown_inline",
-            },
-
-            highlight = {
-                enable = true,
-            },
-
-            indent = {
-                enable = true,
-            },
-        },
-
-    },
-
-    {
-        "MeanderingProgrammer/render-markdown.nvim",
-        ft = { "markdown" },
-        opts = {},
-    },
 -- denops installation and enable skkeleton (incompleted)
 
 --    {
