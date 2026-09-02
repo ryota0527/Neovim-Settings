@@ -1,3 +1,9 @@
+-- leader key
+vim.g.mapleader = " "
+
+-- set tabline
+vim.opt.showtabline = 2
+
 -- activete lazy
 vim.opt.rtp:prepend("~/.local/share/nvim/lazy.nvim")
 
@@ -9,9 +15,6 @@ require("colorsettings")
 -- activete pyright
 vim.lsp.config('pyright', {})
 vim.lsp.enable('pyright')
-
--- leader key
-vim.g.mapleader = " "
 
 -- set row numbers
 vim.opt.number = true
@@ -54,8 +57,3 @@ vim.opt.showmatch = true
 
 -- set statusline
 vim.opt.laststatus = 2
-vim.opt.statusline = "%f %m %r %= %y [%l/%L] %p%%"
-
--- set tabline
-vim.opt.showtabline = 2
-
