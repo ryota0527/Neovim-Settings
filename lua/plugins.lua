@@ -49,7 +49,6 @@ return {
         "benlubas/molten-nvim",
     },
 
-<<<<<<< HEAD
     {
         'stevearc/oil.nvim',
         ---@module 'oil'
@@ -107,9 +106,6 @@ return {
 
         end,
     },
-=======
--- denops installation and enable skkeleton (incompleted)
->>>>>>> 3ee64b1fc62e6edf3f4298968d3be97c585aa07a
 
     {
         "kdheepak/lazygit.nvim",
