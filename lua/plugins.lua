@@ -129,4 +129,25 @@ return {
         }
     },
 
+    {
+        'romgrk/barbar.nvim',
+        dependencies = {
+          'nvim-mini/mini.icons', -- OPTIONAL: for file icons
+        },
+        init = function() vim.g.barbar_auto_setup = false end,
+
+        keys = {
+            {
+                '<Tab>',
+                '<cmd>BufferNext<CR>',
+                desc = 'Next buffer',
+            },
+            {
+                '<S-Tab>',
+                '<cmd>BufferPrevious<CR>',
+                desc = 'Previous buffer',
+            },
+        },
+    },
+
 }

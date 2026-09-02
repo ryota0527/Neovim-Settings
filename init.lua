@@ -56,4 +56,6 @@ vim.opt.showmatch = true
 vim.opt.laststatus = 2
 vim.opt.statusline = "%f %m %r %= %y [%l/%L] %p%%"
 
+-- set tabline
+vim.opt.showtabline = 2
 
