@@ -1,5 +1,5 @@
 -- activete lazy
-vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
+vim.opt.rtp:prepend("~/.local/share/nvim/lazy.nvim")
 
 -- plugins installation
 require("lazy").setup(require("plugins"))
@@ -10,11 +10,16 @@ require("colorsettings")
 vim.lsp.config('pyright', {})
 vim.lsp.enable('pyright')
 
+-- leader key
+vim.g.mapleader = " "
+
 -- set row numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 vim.api.nvim_set_hl(0, "CursorLine", { bg = "#333333" })
+vim.api.nvim_set_hl(0, "CursorColumn", { bg = "#333333" })
 
 -- set indent
 vim.opt.tabstop = 4

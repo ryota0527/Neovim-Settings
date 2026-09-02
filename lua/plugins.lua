@@ -37,6 +37,11 @@ return {
         
     },
 
+    { 
+        'nvim-mini/mini.icons',
+        version = '*' 
+    },
+
     {
         "neovim/nvim-lspconfig"
     },
@@ -46,52 +51,82 @@ return {
     },
 
     {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-        event = { "BufReadPost", "BufNewFile" },
-        opts = {
-            ensure_installed = {
-                "lua",
-                "vim",
-                "vimdoc",
-                "python",
-                "markdown",
-                "markdown_inline",
-            },
-
-            highlight = {
-                enable = true,
-            },
-
-            indent = {
-                enable = true,
-            },
-        },
-
+        'stevearc/oil.nvim',
+        ---@module 'oil'
+        ---@type oil.SetupOpts
+        opts = {},
+        -- Optional dependencies
+        dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+        -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+        -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+        lazy = false,
     },
 
     {
-        "MeanderingProgrammer/render-markdown.nvim",
-        ft = { "markdown" },
-        opts = {},
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            require("lualine").setup({
+                options = {
+                    theme = "auto",
+                    section_separators = "",
+                    component_separators = "|",
+                },
+
+                sections = {
+                    lualine_a = { "mode" },
+
+                    lualine_b = {
+                        "branch",
+                        "diff",
+                        "diagnostics",
+                    },
+
+                    lualine_c = {
+                        {
+                            "filename",
+                            path = 1,
+                        },
+                    },
+
+                    lualine_x = {
+                        "encoding",
+                        "fileformat",
+                        "filetype",
+                    },
+
+                    lualine_y = {
+                        "progress",
+                    },
+
+                    lualine_z = {
+                        "location",
+                    },
+                },
+            })
+
+        end,
     },
--- denops installation and enable skkeleton (incompleted)
 
---    {
---        "vim-denops/denops.vim"
---        cond = function()
---            return vim.fn.executable('deno') == 1
---        end,
---        lazy = true,
---    },
-
---    {
---        "vim-skk/skkeleton",
---        dependencies = {
---            "vim-denops/denops.vim",
---        },
---    },
+    {
+        "kdheepak/lazygit.nvim",
+        lazy = true,
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        -- optional for floating window border decoration
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+        -- setting the keybinding for LazyGit with 'keys' is recommended in
+        -- order to load the plugin when the command is run for the first time
+        keys = {
+            { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+        }
+    },
 
 }
-
-
