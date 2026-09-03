@@ -15,7 +15,7 @@ Installation of
 is required for full functionality of this setting files and plugins.
 
 ## Structure of files
-Neovim-Settings/<br>   
+Neovim-Settings/<br>
 ├── init.lua<br>
 └── lua/<br>
   ├── colorsettings.lua<br>
@@ -51,6 +51,8 @@ Neovim-Settings/<br>
 - g -> l : $ (normal, visual)
 - Tab : add indent (normal, visual, insert)
 - Shift + Tab : remove indent (normal, visual, insert)
-- <leader> + Tab : move to the next tab (normal)
-- <leader> + Shift + Tab : move to the former tab (normal)
-- <leader> + lg : launch lazygit (normal)
+- `<leader>` + Tab : move to the next tab (normal)
+- `<leader>` + Shift + Tab : move to the former tab (normal)
+- `<leader>` + lg : launch lazygit (normal)
+- `<right>` : move the boundary of the window right
+- `<left>` : move the boundary of the window left
