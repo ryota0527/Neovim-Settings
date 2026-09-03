@@ -15,20 +15,20 @@ Installation of
 is required for full functionality of this setting files and plugins.
 
 ## Structure of files
-Neovim-Settings/   
-├── init.lua  
-└── lua/  
-  ├── colorsettings.lua  
-  ├── keymap.lua  
-  └── plugins
-        ├── barbar.lua  
-        ├── lazygit.lua  
-        ├── lspconfig.lua  
-        ├── lualine.lua  
-        ├── mason.lua  
-        ├── oil.lua
-        ├── plugins.lua
-        └── vimtex.lua
+Neovim-Settings/<br>   
+├── init.lua<br>
+└── lua/<br>
+  ├── colorsettings.lua<br>
+  ├── keymap.lua<br>
+  └── plugins<br>
+        ├── barbar.lua<br>
+        ├── lazygit.lua<br>
+        ├── lspconfig.lua<br>
+        ├── lualine.lua<br>
+        ├── mason.lua<br>
+        ├── oil.lua<br>
+        ├── plugins.lua<br>
+        └── vimtex.lua<br>
 
 
 ## Plugins used in these files
