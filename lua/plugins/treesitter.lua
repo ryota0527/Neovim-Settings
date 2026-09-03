@@ -1,35 +1,44 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        branch = "master",
-
+        branch = "main",
         lazy = false,
         build = ":TSUpdate",
 
         config = function()
-            require("nvim-treesitter.configs").setup({
-                ensure_installed = {
-                    "python",
-                    "lua",
-                    "bash",
-                    "fortran",
-                    "markdown",
-                },
+            local ts = require("nvim-treesitter")
 
-                highlight = {
-                    enable = true,
-                },
-
-                indent = {
-                    enable = true,
-                },
+            ts.setup({
+                install_dir = vim.fn.stdpath("data") .. "/site",
             })
 
+            -- Install parsers
+            ts.install({
+                "python",
+                "lua",
+                "bash",
+                "fortran",
+                "latex",
+                "markdown",
+                "vim",
+                "vimdoc",
+            })
+
+            -- Enable Treesitter highlighting
+            vim.api.nvim_create_autocmd("FileType", {
+                callback = function()
+                    local ok = pcall(vim.treesitter.start)
+                    if not ok then
+                        return
+                    end
+                end,
+            })
+
+            -- Folding
             vim.opt.foldmethod = "expr"
-            vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+            vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
             vim.opt.foldlevel = 99
             vim.opt.foldlevelstart = 99
-
             vim.opt.foldcolumn = "1"
 
             vim.opt.fillchars = {
