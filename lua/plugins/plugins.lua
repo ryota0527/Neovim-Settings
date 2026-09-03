@@ -43,7 +43,7 @@ return {
 
     {
         "mason-org/mason-lspconfig.nvim",
-    },
+    }, 
 
     require("plugins.oil"),
     require("plugins.lualine"),
@@ -52,5 +52,6 @@ return {
     require("plugins.lspconfig"),
     require("plugins.mason"),
     require("plugins.vimtex"),
+    require("plugins.treesitter"),
 
 }
