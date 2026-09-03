@@ -5,16 +5,12 @@ vim.g.mapleader = " "
 vim.opt.showtabline = 2
 
 -- activete lazy
-vim.opt.rtp:prepend("~/.local/share/nvim/lazy.nvim")
+vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
 
 -- plugins installation
-require("lazy").setup(require("plugins"))
+require("lazy").setup(require("plugins.plugins"))
 require("keymap")
 require("colorsettings")
-
--- activete pyright
-vim.lsp.config('pyright', {})
-vim.lsp.enable('pyright')
 
 -- set row numbers
 vim.opt.number = true
