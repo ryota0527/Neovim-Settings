@@ -18,32 +18,8 @@ return {
     },
 
     {
-        "stevearc/oil.nvim",
-    },
-
-    {
-        "romgrk/barbar.nvim",
-    },
-
-    {
-        "nvim-lualine/lualine.nvim",
-    },
-
-    {
-        "kdheepak/lazygit.nvim",
-    },
-
-    {
-        "neovim/nvim-lspconfig",
-    },
-
-    {
         "mason-org/mason.nvim",
     },
-
-    {
-        "mason-org/mason-lspconfig.nvim",
-    }, 
 
     require("plugins.oil"),
     require("plugins.lualine"),
@@ -53,5 +29,7 @@ return {
     require("plugins.mason"),
     require("plugins.vimtex"),
     require("plugins.treesitter"),
+    require("plugins.nvimdap"),
+    require("plugins.nvimdap_python"),
 
 }
