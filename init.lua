@@ -14,6 +14,7 @@ require("colorsettings")
 
 require("dap-python").setup("~/miniforge3/envs/myenv/bin/python3")
 
+
 -- set row numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
