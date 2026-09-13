@@ -8,9 +8,12 @@ vim.opt.showtabline = 2
 vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
 
 -- plugins installation
-require("lazy").setup(require("plugins.plugins"))
+require("lazy").setup("plugins")
 require("keymap")
 require("colorsettings")
+
+require("dap-python").setup("~/miniforge3/envs/myenv/bin/python3")
+
 
 -- set row numbers
 vim.opt.number = true
