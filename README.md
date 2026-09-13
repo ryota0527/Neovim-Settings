@@ -3,11 +3,11 @@
 My Neovim setups.
 
 These setups contain sufficient features for one to edit with nvim such as
-[x] Smooth and comfortable file exploration with oil.nvim
-[x] Decoration of statusline and tab-bar
-[x] Debug environment for Python and Fortran with UI
-[x] UI for git
-[x] lsp for Python, LaTeX, Neovim-Lua, Fortran, and English correction
+- Smooth and comfortable file exploration with oil.nvim
+- Decoration of statusline and tab-bar
+- Debug environment for Python and Fortran with UI
+- UI for git
+- lsp for Python, LaTeX, Neovim-Lua, Fortran, and English correction
 
 ## Requirements and Dependencies
 nvim >= 0.12.4 is required. 
