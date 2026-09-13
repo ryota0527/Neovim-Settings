@@ -1,58 +1,65 @@
 # Neovim Settings
 
-Basic nvim settings.  
-Easily introduced by putting this directory under ~/.config/  
-Use minimum branch for basic setups. Master branch may include several features which are subjective. 
+My Neovim setups.
 
-## Requirements
+These setups contain sufficient features for one to edit with nvim such as
+[x] Smooth and comfortable file exploration with oil.nvim
+[x] Decoration of statusline and tab-bar
+[x] Debug environment for Python and Fortran with UI
+[x] UI for git
+[x] lsp for Python, LaTeX, Neovim-Lua, Fortran, and English correction
+
+## Requirements and Dependencies
 nvim >= 0.12.4 is required. 
   
-Installation of 
+Installations of 
 - lazy.nvim
 - LaTeX environment
-- Zathura
+- Zathura (pdf viewer)
+- debugpy (python debugger)
 
-is required for full functionality of this setting files and plugins.
+(if one edits fortran codes)
+- compiler for fortran
+- gdb (fortran debugger)
 
-## Structure of files
-Neovim-Settings/<br>
-├── init.lua<br>
-└── lua/<br>
-  ├── colorsettings.lua<br>
-  ├── keymap.lua<br>
-  └── plugins<br>
-        ├── barbar.lua<br>
-        ├── lazygit.lua<br>
-        ├── lspconfig.lua<br>
-        ├── lualine.lua<br>
-        ├── mason.lua<br>
-        ├── oil.lua<br>
-        ├── plugins.lua<br>
-        └── vimtex.lua<br>
-
-
-## Plugins used in these files
-- tokyonight (colorscheme)
-- barbar (tab visualization)
-- lazygit (git integration)
-- lspconfig (lsp introduction)
-- lualine (status bar decoration)
-- mason (lsp installation)
-- oil (flexible file exploration)
-- vimtex (latex supports)
-- mini.icons (icons)
+are required for full functionality of this setting files and plugins.
 
 ## Keybindings
-- leader key: space
 
-- j -> k : Esc (insert, visual, normal)
-- Alt + h / j / k / l : move 10 rows or columns (visual, normal)
-- g -> h : ^ (normal, visual)
-- g -> l : $ (normal, visual)
-- Tab : add indent (normal, visual, insert)
-- Shift + Tab : remove indent (normal, visual, insert)
-- `<leader>` + Tab : move to the next tab (normal)
-- `<leader>` + Shift + Tab : move to the former tab (normal)
+- `<leader>` : space
+
+- `jk` : Esc (insert, visual, normal)
+- `<A- h / j / k / l>` : move 10 rows or columns (visual, normal)
+- `gh` : ^ (normal, visual)
+- `gl` : $ (normal, visual)
+
+- `<Tab>` : add indent (normal, visual, insert)
+- `<S-Tab>` : remove indent (normal, visual, insert)
+
+- `<right>` : move the boundary of the window right (normal)
+- `<left>` : move the boundary of the window left (normal)
+
+- `<leader><right>` : move to the window on the right (normal)
+- `<leader><left>` : move to the window on the left (normal)
+- `<leader><up>` : move to the window above (normal)
+- `<leader><down>` : move to the window below (normal)
+
+- `<leader>i` : show the info of lsp's diagnostic on the current line (normal)
+
+#### barbar
+- `<leader>` + Tab : move to the next buffer (normal)
+- `<leader>` + Shift + Tab : move to the former buffer (normal)
+
+#### Lazygit
 - `<leader>` + lg : launch lazygit (normal)
-- `<right>` : move the boundary of the window right
-- `<left>` : move the boundary of the window left
+
+#### nvim-dap
+- `<leader>dd` : launch the debugger / go to the next breakpoint
+- `<leader>b` : put a breakpoint
+- `<leader>B` : put a conditional breakpoint
+- `<leader>ds` : step over
+- `<leader>di` : step into
+- `<leader>do` : step out
+- `<leader>du` : toggle nvim-dap-ui
+- `<leader>de` : evaluate the variable
+

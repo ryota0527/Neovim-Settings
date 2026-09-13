@@ -28,9 +28,8 @@ return {
                             local dir = oil.get_current_dir() .. entry.name
                             local oil_win = vim.api.nvim_get_current_win()
 
-                            vim.api.nvim_win_close(oil_win, true)
-
                             vim.cmd("topleft 25vsplit")
+                            vim.api.nvim_win_close(oil_win, true)
 
                             local new_oil_win = vim.api.nvim_get_current_win()
 
@@ -65,9 +64,9 @@ return {
                             local dir = oil.get_current_dir() .. entry.name
                             local oil_win = vim.api.nvim_get_current_win()
 
-                            vim.api.nvim_win_close(oil_win, true)
 
                             vim.cmd("topleft 25vsplit")
+                            vim.api.nvim_win_close(oil_win, true)
 
                             local new_oil_win = vim.api.nvim_get_current_win()
 
