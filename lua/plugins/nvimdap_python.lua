@@ -3,6 +3,6 @@ return {
     lazy = false,
     dependencies = { "mfussenegger/nvim-dap" },
     config = function()
-        require("dap-python").setup("python")
+        require("dap-python").setup("~/miniforge3/envs/myenv/bin/python3") -- Change here to the path to python executable in your env
     end,
 }

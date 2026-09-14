@@ -2,9 +2,9 @@
 
 My Neovim setups.
 
-These setups contain sufficient features for one to edit with nvim such as
+These setups provide sufficient features for nvim editing environment, including
 - Smooth and comfortable file exploration with oil.nvim
-- Decoration of statusline and tab-bar
+- Decoration of statusline and tab bar
 - Debug environment for Python and Fortran with UI
 - UI for git
 - lsp for Python, LaTeX, Neovim-Lua, Fortran, and English correction
@@ -22,7 +22,7 @@ Installations of
 - compiler for fortran
 - gdb (fortran debugger)
 
-are required for full functionality of this setting files and plugins.
+are required for full functionality of the configurations and plugins.
 
 ## Keybindings
 
@@ -48,15 +48,15 @@ are required for full functionality of this setting files and plugins.
 
 #### barbar
 - `<leader>` + Tab : move to the next buffer (normal)
-- `<leader>` + Shift + Tab : move to the former buffer (normal)
+- `<leader>` + Shift + Tab : move to the previous buffer (normal)
 
 #### Lazygit
 - `<leader>` + lg : launch lazygit (normal)
 
 #### nvim-dap
-- `<leader>dd` : launch the debugger / go to the next breakpoint
-- `<leader>b` : put a breakpoint
-- `<leader>B` : put a conditional breakpoint
+- `<leader>dd` : launch the debugger / continue to the next breakpoint
+- `<leader>b` : set a breakpoint
+- `<leader>B` : set a conditional breakpoint
 - `<leader>ds` : step over
 - `<leader>di` : step into
 - `<leader>do` : step out
