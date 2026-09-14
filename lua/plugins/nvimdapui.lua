@@ -25,21 +25,6 @@ return {
                     position = "bottom",
                 },
             },
-
-            keys = {
-                {
-                    "<leader>du",
-                    function()
-                        dapui.toggle()
-                    end,
-                },
-                {
-                    "<leader>de",
-                    function()
-                        dapui.eval()
-                    end,
-                },
-            },
         })
 
         dap.listeners.after.event_initialized.dapui_config = function()

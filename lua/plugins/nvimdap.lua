@@ -81,5 +81,19 @@ return {
                 )
             end,
         },
+
+        {
+            "<leader>du",
+            function()
+                require("dapui").toggle()
+            end,
+        },
+
+        {
+            "<leader>de",
+            function()
+                require("dapui").eval()
+            end,
+        },
     },
 }

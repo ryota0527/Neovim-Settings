@@ -1,6 +1,6 @@
 # Neovim Settings
 
-My Neovim setups.
+My personal Neovim setups.
 
 These setups provide sufficient features for nvim editing environment, including
 - Smooth and comfortable file exploration with oil.nvim
@@ -27,31 +27,27 @@ are required for full functionality of the configurations and plugins.
 ## Keybindings
 
 - `<leader>` : space
-
 - `jk` : Esc (insert, visual, normal)
 - `<A- h / j / k / l>` : move 10 rows or columns (visual, normal)
 - `gh` : ^ (normal, visual)
 - `gl` : $ (normal, visual)
-
 - `<Tab>` : add indent (normal, visual, insert)
 - `<S-Tab>` : remove indent (normal, visual, insert)
-
 - `<right>` : move the boundary of the window right (normal)
 - `<left>` : move the boundary of the window left (normal)
-
-- `<leader><right>` : move to the window on the right (normal)
-- `<leader><left>` : move to the window on the left (normal)
-- `<leader><up>` : move to the window above (normal)
-- `<leader><down>` : move to the window below (normal)
-
+- `<leader><right>` or `<leader>l` : move to the window on the right (normal)
+- `<leader><left>` or `<leader>h` : move to the window on the left (normal)
+- `<leader><up>` or `<leader>k` : move to the window above (normal)
+- `<leader><down>` or `<leader>j` : move to the window below (normal)
 - `<leader>i` : show the info of lsp's diagnostic on the current line (normal)
+- `<leader>o` : move to oil's window
 
 #### barbar
 - `<leader>` + Tab : move to the next buffer (normal)
 - `<leader>` + Shift + Tab : move to the previous buffer (normal)
 
 #### Lazygit
-- `<leader>` + lg : launch lazygit (normal)
+- `<leader>g` : launch lazygit (normal)
 
 #### nvim-dap
 - `<leader>dd` : launch the debugger / continue to the next breakpoint
