@@ -2,7 +2,6 @@
 
 -- insert mode
 vim.keymap.set("i", "jk", "<Esc>", { noremap = true })
-vim.keymap.set("i", "<C-d>", "<BS>", { noremap = true })
 vim.keymap.set("i", "<Tab>", "<C-t>", { noremap = true })
 vim.keymap.set("i", "<S-Tab>", "<C-d>", { noremap = true })
 
