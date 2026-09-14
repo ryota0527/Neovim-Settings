@@ -3,6 +3,6 @@ return {
     lazy = false,
     dependencies = { "mfussenegger/nvim-dap" },
     config = function()
-        require("dap-python").setup("python")
+        require("dap-python").setup("~/myenv/bin/python3.12")
     end,
 }
