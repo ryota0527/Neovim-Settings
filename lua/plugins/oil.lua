@@ -89,20 +89,16 @@ return {
                     mode = "n"
                 },
 
-                ["<C-p>"] = {
+                ["<leader>p"] = {
                     function()
-                        actions.preview()
-                        vim.opt_local.number = false
-                        vim.opt_local.relativenumber = false
+                        actions.preview.callback()
                     end,
                     mode = "n"
                 },
 
                 ["q"] = {
                     function()
-                        actions.close()
-                        vim.opt_local.number = false
-                        vim.opt_local.relativenumber = false
+                        actions.close.callback()
                     end,
                     mode = "n"
                 },
@@ -125,14 +121,20 @@ return {
         vim.api.nvim_create_autocmd("VimEnter", {
             group = oil_group,
             callback = function()
+                if vim.bo.filetype == "oil" then
+                    vim.opt_local.number = false
+                    vim.opt_local.relativenumber = false
+                    return
+                end
+
                 local file = vim.fn.argv(0)
 
-                if file == "" or vim.fn.isdirectory(file) == 1 then
+                if file == "" then
                     return
                 end
 
                 local dir = vim.fn.fnamemodify(file, ":p:h")
-                local main_win = vim.api.nvim_get_current_win()
+                    local main_win = vim.api.nvim_get_current_win()
 
                 vim.schedule(function()
                     if not vim.api.nvim_win_is_valid(main_win) then

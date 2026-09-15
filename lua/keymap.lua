@@ -35,6 +35,8 @@ vim.keymap.set("n", "<leader><S-tab>", "<cmd>BufferPrevious<cr>", { noremap = tr
 
 vim.keymap.set("n", "<left>", "<C-w><", { noremap = true })
 vim.keymap.set("n", "<right>", "<C-w>>", { noremap = true })
+vim.keymap.set("n", "<up>", "<C-w>+", { noremap = true })
+vim.keymap.set("n", "<down>", "<C-w>-", { noremap = true })
 
 vim.keymap.set("n", "<leader>i", vim.diagnostic.open_float, { noremap = true })
 

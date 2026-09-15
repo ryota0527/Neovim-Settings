@@ -38,6 +38,8 @@ are required for full functionality of this setting files and plugins.
 
 - `<right>` : move the boundary of the window right (normal)
 - `<left>` : move the boundary of the window left (normal)
+- `<up>` : move the boundary of the window upward (normal)
+- `<down>` : move the boundary of the window downward (normal)
 
 - `<leader><right>` : move to the window on the right (normal)
 - `<leader><left>` : move to the window on the left (normal)
@@ -47,11 +49,18 @@ are required for full functionality of this setting files and plugins.
 - `<leader>i` : show the info of lsp's diagnostic on the current line (normal)
 
 #### barbar
-- `<leader>` + Tab : move to the next buffer (normal)
-- `<leader>` + Shift + Tab : move to the former buffer (normal)
+- `<leader><Tab>` : move to the next buffer (normal)
+- `<leader><S-Tab>` : move to the former buffer (normal)
+
+#### oil
+- `<CR>` : open the selected file (vertical split)
+- `<C-s>` : open the selected file (horizontal split)
+- `-` : move to the parent directory
+- `<leader>p` : preview
+- `q` : close oil
 
 #### Lazygit
-- `<leader>` + lg : launch lazygit (normal)
+- `<leader>` + g : launch lazygit (normal)
 
 #### nvim-dap
 - `<leader>dd` : launch the debugger / go to the next breakpoint
