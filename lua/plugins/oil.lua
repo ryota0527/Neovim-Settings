@@ -155,7 +155,7 @@ return {
         })
 
         local function fix_oil_width()
-            local wins = vim.api.nvim_list_wins()
+        local wins = vim.api.nvim_list_wins()
 
             if #wins <= 1 then
                 return
