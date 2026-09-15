@@ -28,13 +28,13 @@ vim.keymap.set("n", "<S-Tab>", "<<", { noremap = true })
 vim.keymap.set("n", "gh", "^", { noremap = true })
 vim.keymap.set("n", "gl", "$", { noremap = true })
 
-vim.keymap.set("n", "<leader>g", "<cmd>LazyGit<cr>", { noremap = true })
-
 vim.keymap.set("n", "<leader><Tab>", "<cmd>BufferNext<cr>", { noremap = true })
 vim.keymap.set("n", "<leader><S-tab>", "<cmd>BufferPrevious<cr>", { noremap = true })
 
 vim.keymap.set("n", "<left>", "<C-w><", { noremap = true })
 vim.keymap.set("n", "<right>", "<C-w>>", { noremap = true })
+vim.keymap.set("n", "<up>", "<C-w>+", { noremap = true })
+vim.keymap.set("n", "<down>", "<C-w>-", { noremap = true })
 
 vim.keymap.set("n", "<leader>i", vim.diagnostic.open_float, { noremap = true })
 

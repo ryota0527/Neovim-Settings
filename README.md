@@ -35,12 +35,20 @@ are required for full functionality of the configurations and plugins.
 - `<S-Tab>` : remove indent (normal, visual, insert)
 - `<right>` : move the boundary of the window right (normal)
 - `<left>` : move the boundary of the window left (normal)
+- `<up>` : move the boundary of the window upward (normal)
+- `<down>` : move the boundary of the window downward (normal)
 - `<leader><right>` or `<leader>l` : move to the window on the right (normal)
 - `<leader><left>` or `<leader>h` : move to the window on the left (normal)
 - `<leader><up>` or `<leader>k` : move to the window above (normal)
 - `<leader><down>` or `<leader>j` : move to the window below (normal)
 - `<leader>i` : show the info of lsp's diagnostic on the current line (normal)
 - `<leader>o` : move to oil's window
+
+#### oil
+- `<CR>` : open the selected file (vertical split)
+- `<C-s>` : open the selected file (horizontal split)
+- `<leader>p` : preview
+- `q` : close oil
 
 #### barbar
 - `<leader>` + Tab : move to the next buffer (normal)

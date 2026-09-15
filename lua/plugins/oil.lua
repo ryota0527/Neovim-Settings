@@ -8,6 +8,41 @@ return {
         local oil = require("oil")
         local actions = require("oil.actions")
 
+        local function enter_dir(entry)
+            local dir = oil.get_current_dir() .. entry.name
+            local oil_win = vim.api.nvim_get_current_win()
+
+            vim.cmd("topleft 25vsplit")
+            vim.api.nvim_win_close(oil_win, true)
+
+            local new_oil_win = vim.api.nvim_get_current_win()
+
+            vim.api.nvim_win_set_width(new_oil_win, 25)
+            vim.wo[new_oil_win].winfixwidth = true
+
+            oil.open(dir)
+
+            vim.opt_local.number = false
+            vim.opt_local.relativenumber = false
+        end
+
+        local function get_rightmost_win()
+            local rightmost_win = nil
+            local max_col = -1
+
+            for _, win in ipairs(vim.api.nvim_list_wins()) do
+                local pos = vim.api.nvim_win_get_position(win)
+                local col = pos[2]
+
+                if col > max_col then
+                    max_col = col
+                    rightmost_win = win
+                end
+            end
+
+            return rightmost_win
+        end
+
         oil.setup({
             default_file_explorer = true,
 
@@ -19,35 +54,22 @@ return {
                 ["<CR>"] = {
                     function()
                         local entry = oil.get_cursor_entry()
+                        print(entry)
 
                         if not entry then
                             return
                         end
 
                         if entry.type == "directory" then
-                            local dir = oil.get_current_dir() .. entry.name
-                            local oil_win = vim.api.nvim_get_current_win()
-
-                            vim.cmd("topleft 25vsplit")
-                            vim.api.nvim_win_close(oil_win, true)
-
-                            local new_oil_win = vim.api.nvim_get_current_win()
-
-                            vim.api.nvim_win_set_width(new_oil_win, 25)
-                            vim.wo[new_oil_win].winfixwidth = true
-
-                            oil.open(dir)
-
-                            vim.opt_local.number = false
-                            vim.opt_local.relativenumber = false
+                            enter_dir(entry)
 
                         else
                             oil.select({
+                                split = "botright",
                                 vertical = true,
                                 close = false,
                             })
                         end
-
                     end,
                     mode = "n"
                 },
@@ -61,48 +83,29 @@ return {
                         end
 
                         if entry.type == "directory" then
-                            local dir = oil.get_current_dir() .. entry.name
-                            local oil_win = vim.api.nvim_get_current_win()
-
-
-                            vim.cmd("topleft 25vsplit")
-                            vim.api.nvim_win_close(oil_win, true)
-
-                            local new_oil_win = vim.api.nvim_get_current_win()
-
-                            vim.api.nvim_win_set_width(new_oil_win, 25)
-                            vim.wo[new_oil_win].winfixwidth = true
-
-                            oil.open(dir)
-
-                            vim.opt_local.number = false
-                            vim.opt_local.relativenumber = false
+                            enter_dir(entry)
 
                         else
-                            oil.select({
-                                horizontal = true,
-                                close = false,
-                            })
+                            local path = oil.get_current_dir() .. entry.name
+                            local right_win = get_rightmost_win()
+                            vim.api.nvim_set_current_win(right_win)
+                            vim.cmd("belowright split" .. path)
                         end
 
                     end,
                     mode = "n"
                 },
 
-                ["<C-p>"] = {
+                ["<leader>p"] = {
                     function()
-                        actions.preview()
-                        vim.opt_local.number = false
-                        vim.opt_local.relativenumber = false
+                        actions.preview.callback()
                     end,
                     mode = "n"
                 },
 
                 ["q"] = {
                     function()
-                        actions.close()
-                        vim.opt_local.number = false
-                        vim.opt_local.relativenumber = false
+                        actions.close.callback()
                     end,
                     mode = "n"
                 },
@@ -125,9 +128,13 @@ return {
         vim.api.nvim_create_autocmd("VimEnter", {
             group = oil_group,
             callback = function()
+                if vim.bo.filetype == "oil" then
+                    return
+                end
+
                 local file = vim.fn.argv(0)
 
-                if file == "" or vim.fn.isdirectory(file) == 1 then
+                if file == "" then
                     return
                 end
 
