@@ -54,7 +54,6 @@ return {
                 ["<CR>"] = {
                     function()
                         local entry = oil.get_cursor_entry()
-                        print(entry)
 
                         if not entry then
                             return
