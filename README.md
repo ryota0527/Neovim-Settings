@@ -42,7 +42,8 @@ are required for full functionality of the configurations and plugins.
 - `<leader><up>` or `<leader>k` : move to the window above (normal)
 - `<leader><down>` or `<leader>j` : move to the window below (normal)
 - `<leader>i` : show the info of lsp's diagnostic on the current line (normal)
-- `<leader>o` : move to oil's window
+- `<leader>o` : move to oil's window (normal)
+- `<C-space>` : return to normal mode (terminal)
 
 #### oil
 - `<CR>` : open the selected file (vertical split)

@@ -57,3 +57,6 @@ vim.keymap.set("n", "<leader>o", function()
         end
     end
 end, { noremap = true })
+
+-- terminal mode
+vim.keymap.set("t", "<C-space>", [[<C-\><C-n>]], { noremap = true })
