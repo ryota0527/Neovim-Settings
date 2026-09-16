@@ -49,12 +49,14 @@ return {
         {
             '<leader><Tab>',
             '<cmd>BufferNext<CR>',
-            desc = 'Next buffer',
         },
         {
             '<leader><S-Tab>',
             '<cmd>BufferPrevious<CR>',
-            desc = 'Previous buffer',
         },
+        {
+            "<leader>x",
+            "<cmd>BufferClose<CR>",
+        }
     },
 }
