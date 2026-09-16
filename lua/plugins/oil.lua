@@ -31,12 +31,16 @@ return {
             local max_col = -1
 
             for _, win in ipairs(vim.api.nvim_list_wins()) do
-                local pos = vim.api.nvim_win_get_position(win)
-                local col = pos[2]
+                local buf = vim.api.nvim_win_get_buf(win)
 
-                if col > max_col then
-                    max_col = col
-                    rightmost_win = win
+                if vim.bo[buf].buftype ~= "terminal" then
+                    local pos = vim.api.nvim_win_get_position(win)
+                    local col = pos[2]
+
+                    if col > max_col then
+                        max_col = col
+                        rightmost_win = win
+                    end
                 end
             end
 
@@ -63,11 +67,10 @@ return {
                             enter_dir(entry)
 
                         else
-                            oil.select({
-                                split = "botright",
-                                vertical = true,
-                                close = false,
-                            })
+                            local path = oil.get_current_dir() .. entry.name
+                            local right_win = get_rightmost_win()
+                            vim.api.nvim_set_current_win(right_win)
+                            vim.cmd("belowright vsplit " .. path)
                         end
                     end,
                     mode = "n"
@@ -88,7 +91,7 @@ return {
                             local path = oil.get_current_dir() .. entry.name
                             local right_win = get_rightmost_win()
                             vim.api.nvim_set_current_win(right_win)
-                            vim.cmd("belowright split" .. path)
+                            vim.cmd("belowright split " .. path)
                         end
 
                     end,

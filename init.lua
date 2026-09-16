@@ -7,10 +7,11 @@ vim.opt.showtabline = 2
 -- activete lazy
 vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
 
--- plugins installation
+-- plugins and configs loading
 require("lazy").setup("plugins")
-require("keymap")
-require("colorsettings")
+require("config.keymap")
+require("config.colorsettings")
+require("config.commands")
 
 -- set row numbers
 vim.opt.number = true
