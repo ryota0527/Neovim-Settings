@@ -131,6 +131,8 @@ return {
             group = oil_group,
             callback = function()
                 if vim.bo.filetype == "oil" then
+                    vim.opt_local.number = false
+                    vim.opt_local.relativenumber = false
                     return
                 end
 
