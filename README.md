@@ -68,3 +68,8 @@ are required for full functionality of the configurations and plugins.
 - `<leader>du` : toggle nvim-dap-ui
 - `<leader>de` : evaluate the variable
 
+#### telescope
+- `<leader>ff` : find_files
+- `<leader>fg` : git_files
+- `<leader>fb` : grep_string
+- `<leader>fn` : live_grep
