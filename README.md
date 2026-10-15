@@ -71,5 +71,6 @@ are required for full functionality of the configurations and plugins.
 #### telescope
 - `<leader>ff` : find_files
 - `<leader>fg` : git_files
-- `<leader>fb` : grep_string
+- `<leader>fb` : buffers
+- `<leader>fs` : grep_string
 - `<leader>fn` : live_grep
