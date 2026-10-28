@@ -8,8 +8,35 @@ return {
         local oil = require("oil")
         local actions = require("oil.actions")
 
+        local function get_entry_path(entry)
+            local current_dir = oil.get_current_dir()
+
+            if not current_dir then
+                return nil
+            end
+
+            return vim.fs.joinpath(current_dir, entry.name)
+        end
+
+        local function is_directory(entry)
+            local path = get_entry_path(entry)
+
+            if not path then
+                return false
+            end
+
+            local stat = vim.uv.fs_stat(path)
+
+            return stat ~= nil and stat.type == "directory"
+        end
+
         local function enter_dir(entry)
-            local dir = oil.get_current_dir() .. entry.name
+            local dir = get_entry_path(entry)
+
+            if not dir then
+                return
+            end
+
             local oil_win = vim.api.nvim_get_current_win()
 
             vim.cmd("topleft 25vsplit")
@@ -63,7 +90,7 @@ return {
                             return
                         end
 
-                        if entry.type == "directory" then
+                        if is_directory(entry) then
                             enter_dir(entry)
 
                         else
@@ -84,7 +111,7 @@ return {
                             return
                         end
 
-                        if entry.type == "directory" then
+                        if is_directory(entry) then
                             enter_dir(entry)
 
                         else
